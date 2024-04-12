@@ -52,3 +52,7 @@ Math.round(7.3);
 let message = "This";
 let x = message.toUpperCase();
 document.write(x);
+
+function my_function() {
+    document.getElementById("Test").innerHTML = 0/0
+}
