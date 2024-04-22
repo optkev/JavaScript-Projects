@@ -1,3 +1,15 @@
+function call_Loop() {
+    let text = "";
+    let i = 10 
+        while (i < 20) {
+            text += "<br>The number is " + i;
+            i++;
+        }
+        document.getElementById("loop").innerHTML = text;
+}
+    
+
+
 function Length() {
     let text = "vel felis sit amet porta";
     let length = text.length;
@@ -35,5 +47,4 @@ function constant_function() {
 function return_pi() {
     return Math.PI;
 }
-
 document.getElementById("return_it").innerHTML = return_pi();
