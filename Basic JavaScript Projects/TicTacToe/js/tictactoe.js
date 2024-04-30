@@ -24,7 +24,7 @@ function placeXOrO(squareNumber) {
         return true;
     }
     function computersTurn() {
-        let seccess = false;
+        let success = false;
         let pickASquare;
         while (!success) {
             pickASquare = String(Math.floor(Math.random() * 9));
@@ -44,14 +44,14 @@ function checkWinConditions() {
     else if (arrayIncludes('2X', '5X', '8X')) { drawinLine(508, 50, 508, 558) }
     else if (arrayIncludes('6X', '4X', '2X')) { drawinLine(100, 508, 510, 90) }
     else if (arrayIncludes('0X', '4X', '8X')) { drawinLine(100, 100, 520, 520) }
-    else if (arrayIncludes('0O', '10', '20')) { drawinLine(50, 100, 558, 100) }
-    else if (arrayIncludes('30', '40', '50')) { drawinLine(50, 304, 558, 304) }
-    else if (arrayIncludes('60', '70', '80')) { drawinLine(50, 508, 558, 508) }
-    else if (arrayIncludes('0O', '30', '60')) { drawinLine(100, 50, 100, 558) }
-    else if (arrayIncludes('10', '40', '70')) { drawinLine(304, 50, 304, 558) }
-    else if (arrayIncludes('20', '50', '80')) { drawinLine(508, 50, 508, 558) }
-    else if (arrayIncludes('60', '40', '20')) { drawinLine(100, 508, 510, 90) }
-    else if (arrayIncludes('0O', '40', '80')) { drawinLine(100, 100, 520, 520) }
+    else if (arrayIncludes('0O', '1O', '2O')) { drawinLine(50, 100, 558, 100) }
+    else if (arrayIncludes('3O', '4O', '5O')) { drawinLine(50, 304, 558, 304) }
+    else if (arrayIncludes('6O', '7O', '8O')) { drawinLine(50, 508, 558, 508) }
+    else if (arrayIncludes('0O', '3O', '6O')) { drawinLine(100, 50, 100, 558) }
+    else if (arrayIncludes('1O', '4O', '7O')) { drawinLine(304, 50, 304, 558) }
+    else if (arrayIncludes('2O', '5O', '8O')) { drawinLine(508, 50, 508, 558) }
+    else if (arrayIncludes('6O', '4O', '2O')) { drawinLine(100, 508, 510, 90) }
+    else if (arrayIncludes('0O', '4O', '8O')) { drawinLine(100, 100, 520, 520) }
     else if (selectedSquares.length >= 9) {
         audio('./media/tie.mp3');
         setTimeout(function () { resetGame(); }, 500);
@@ -102,6 +102,15 @@ function drawinLine(coordX1, coordY1, coordX2, coordY2) {
             if (x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }
         }
     }
+    function clear() {
+        const animationLoop = requestAnimationFrame(clear);
+        c.clearRect(0, 0, 608, 608);
+        cancelAnimationFrame(animationLoop);
+    }
+    disableClick();
+    audio('./media/win.mp3');
+    animateLineDrawing();
+    setTimeout(function () { clear(); resetGame(); }, 1000);
 }
 
 function resetGame() {
