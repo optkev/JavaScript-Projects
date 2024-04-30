@@ -1,0 +1,74 @@
+body {
+    background-color: black;
+}
+
+h1, h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
+
+#menuBG {
+    width: 400px;
+    height: 470px;
+    margin: 10px auto;
+}
+
+#frmMenu {
+    width: 400px;
+    height: 200px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
+
+#totalPrice {
+    width: 200px;
+    height: 190px;
+    margin: 0 auto;
+    float: right;
+}
+
+.left {
+    width: 200px;
+    height: 200px;
+    left: 30%;
+    position: absolute;
+    top: 15%;
+}
+
+.center {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 45%;
+    top: 15%;
+   
+}
+
+.right {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 60%;
+    top: 15%;
+}
+
+#showText {
+    width: 200px;
+    height: 190px;
+    margin: 0px auto;
+    float: left;
+}
+
+#cart {
+    margin: 0px auto;
+    width: 400px;
+    height: 200px;
+    top: 70%;
+    position: absolute;
+}
+
+#btnOrder {
+    margin: 10px 0px 0px 100px;
+    width: 100px;
+    height: 40px;
+}
