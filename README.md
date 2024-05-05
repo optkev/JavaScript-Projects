@@ -2,9 +2,9 @@
 These are small Tech Academy JavaScript Projects I have done.
 
 Projects:
-Pizza Menu
-Tic Tac Toe 
-Calculator 
+Pizza Menu,
+Tic Tac Toe,
+Calculator,
 
 Pizza Menu is a website with the ablity for the user to select toppings and size of pizza.
 
